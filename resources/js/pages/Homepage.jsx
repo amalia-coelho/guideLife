@@ -1,12 +1,15 @@
-import mainLayout from "../layouts/mainLayout";
+// Layouts
+import MainLayout from "../layouts/MainLayout";
+
+// Components
+import ListTasks from "../components/list/ListTasks";
 
 export default function Homepage() {
     return (
         <>
-            <h1>Teste</h1>
-            <mainLayout>
-                <h1>Welcome to the Homepage!</h1>
-            </mainLayout>
+            <MainLayout page_title="Boa tarde, Coelho!">
+                <ListTasks />
+            </MainLayout>
         </>
     );
 }
