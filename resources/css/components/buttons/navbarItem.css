@@ -5,5 +5,50 @@
 }
 
 .container-navbar-item {
-    
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+
+    /* animação suave */
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* ícone */
+.container-navbar-item .navbar-icon {
+    font-size: 20px;
+}
+
+/* efeito ao passar o mouse */
+.container-navbar-item:hover {
+    transform: scale(1.15);
+    background: #4A1E2E;
+}
+
+/* tooltip */
+.container-navbar-item span {
+    position: absolute;
+    top: -28px;
+    background: #4A1E2E;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(5px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    color: #fff;
+}
+
+/* tooltip aparece no hover */
+.container-navbar-item:hover span {
+    opacity: 1;
+    transform: translateY(0);
 }
